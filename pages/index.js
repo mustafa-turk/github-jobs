@@ -21,10 +21,15 @@ export default function HomePage() {
   }
 
   return (
-    <PageLayout>
+    <PageLayout title="Github Jobs - Home">
       <Search
         onSearch={(values) =>
-          router.push(`?${qs.stringify({ title: values.title, location: values.location })}`)
+          router.push(
+            `?${qs.stringify(
+              { title: values.title, location: values.location },
+              { skipEmptyString: true },
+            )}`,
+          )
         }
       />
       <List>{renderJobsListContent()}</List>
