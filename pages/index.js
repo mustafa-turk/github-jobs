@@ -10,16 +10,6 @@ export default function HomePage() {
   const router = useRouter();
   const { jobs, loading } = useJobs(router.asPath);
 
-  function renderJobsListContent() {
-    if (loading) {
-      return 'loading...';
-    }
-    if (isEmpty(jobs)) {
-      return 'nothing found :(';
-    }
-    return map(jobs, (job) => <ListItem key={job.id} details={job} />);
-  }
-
   return (
     <PageLayout title="Github Jobs - Home">
       <Search
@@ -32,7 +22,11 @@ export default function HomePage() {
           )
         }
       />
-      <List>{renderJobsListContent()}</List>
+      <List isLoading={loading} isEmpty={isEmpty(jobs)}>
+        {map(jobs, (job) => (
+          <ListItem key={job.id} details={job} />
+        ))}
+      </List>
     </PageLayout>
   );
 }

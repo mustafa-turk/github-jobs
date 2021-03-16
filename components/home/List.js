@@ -1,6 +1,12 @@
 import styles from './List.module.scss';
 
-export function List({ children }) {
+export function List({ children, isLoading, isEmpty }) {
+  if (isLoading) {
+    return 'loading...';
+  }
+  if (isEmpty) {
+    return 'nothing found :(';
+  }
   return <div>{children}</div>;
 }
 
