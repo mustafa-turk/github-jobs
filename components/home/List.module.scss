@@ -1,0 +1,20 @@
+.listItem {
+  padding: 15px;
+  border-radius: 10px;
+  margin: 10px 0;
+  transition: background 0.5s ease;
+  &:hover {
+    cursor: pointer;
+    background: #f6f8fa;
+  }
+
+  .listItemTitle {
+    font-weight: 600;
+    font-size: 24px;
+    margin-bottom: 5px;
+  }
+
+  .listItemLocation {
+    color: #888888
+  }
+}
