@@ -1,4 +1,5 @@
 import { useForm } from 'react-hook-form';
+import { IoSearch } from 'react-icons/io5';
 import styles from './Search.module.scss';
 
 export default function Search({ onSearch }) {
@@ -7,9 +8,10 @@ export default function Search({ onSearch }) {
   return (
     <div className={styles.search}>
       <form onSubmit={handleSubmit(onSearch)}>
-        <input type="text" placeholder="Title" name="title" ref={register} />
-        <input type="text" placeholder="Location" name="location" ref={register} />
-        <button type="submit">Search</button>
+        <input type="text" placeholder="Search..." name="title" ref={register} />
+        <button type="submit">
+          <IoSearch />
+        </button>
       </form>
     </div>
   );

@@ -7,13 +7,9 @@ export default function DetailsPage() {
   const { id } = router.query;
   const { details, loading } = useJobDetails(id);
 
-  if (loading) {
-    return 'loading...';
-  }
-
   return (
-    <PageLayout title={details.title}>
-      <p>{details.title}</p>
+    <PageLayout title={details?.title}>
+      {loading ? 'loading...' : <p>{details.title}</p>}
     </PageLayout>
   );
 }

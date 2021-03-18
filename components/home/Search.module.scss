@@ -1,7 +1,10 @@
+@import "../../styles/breakpoints";
+@import "../../styles/mixins";
+
 .search {
-  background-color: #F1F8FF;
+  background: #f6f8fa;
   border-radius: 10px;
-  padding: 30px;
+  padding: 12px;
   margin-bottom: 30px;
 
   form {
@@ -13,17 +16,23 @@
       border: none;
       border-radius: 5px;
       padding: 12px;
-      font-size: 15px;
+      font-size: 17px;
+      @include placeholder-color(#a8b2bb);
     }
     button {
       border: none;
+      display: flex;
+      align-items: center;
       padding: 0 20px;
       background-color: #0366D6;
       color: white;
       border-radius: 5px;
-      font-size: 15px;
+      font-size: 21px;
       font-weight: bold;
       cursor: pointer;
+      @media (max-width: $breakpoint-md) {
+        padding: 12px;
+      }
     }
   }
 }

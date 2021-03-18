@@ -11,7 +11,7 @@ export default function HomePage() {
   const { jobs, loading } = useJobs(router.asPath);
 
   return (
-    <PageLayout title="Github Jobs - Home">
+    <PageLayout>
       <Search
         onSearch={(values) =>
           router.push(

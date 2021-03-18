@@ -5,7 +5,7 @@ export default function PageLayout({ children, title }) {
   return (
     <div className={styles.wrapper}>
       <Head>
-        <title>{title}</title>
+        <title>{title || 'GitHub Jobs'}</title>
       </Head>
       <Navbar />
       {children}

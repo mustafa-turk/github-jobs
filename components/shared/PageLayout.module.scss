@@ -1,6 +1,11 @@
+@import "../../styles/breakpoints";
+
 .wrapper {
   max-width: 960px;
   margin: 0 auto;
+  @media (max-width: $breakpoint-lg) {
+    margin: 0 20px;
+  }
 }
 
 .navbar {
