@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import styles from './List.module.scss';
 
 export function List({ children, isLoading, isEmpty }) {
@@ -13,10 +14,14 @@ export function List({ children, isLoading, isEmpty }) {
 export function ListItem({ details }) {
   return (
     <div className={styles.listItem}>
-      <p className={styles.listItemTitle}>{details.title}</p>
-      <p className={styles.listItemLocation}>
-        {details.company} - {details.location}
-      </p>
+      <Link href={`/${details.id}`}>
+        <a>
+          <p className={styles.listItemTitle}>{details?.title}</p>
+          <p className={styles.listItemLocation}>
+            {details?.company} - {details?.location}
+          </p>
+        </a>
+      </Link>
     </div>
   );
 }
