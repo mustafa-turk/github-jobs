@@ -14,12 +14,7 @@ export default function HomePage() {
     <PageLayout>
       <Search
         onSearch={(values) =>
-          router.push(
-            `?${qs.stringify(
-              { title: values.title, location: values.location },
-              { skipEmptyString: true },
-            )}`,
-          )
+          router.push(`?${qs.stringify({ search: values.search }, { skipEmptyString: true })}`)
         }
       />
       <List isLoading={loading} isEmpty={isEmpty(jobs)}>

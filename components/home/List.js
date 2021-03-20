@@ -13,11 +13,11 @@ export function List({ children, isLoading, isEmpty }) {
 
 export function ListItem({ details }) {
   return (
-    <div className={styles.listItem}>
+    <div className={styles.wrapper}>
       <Link href={`/${details.id}`}>
         <a>
-          <p className={styles.listItemTitle}>{details?.title}</p>
-          <p className={styles.listItemLocation}>
+          <p className={styles.title}>{details?.title}</p>
+          <p className={styles.subtitle}>
             {details?.company} - {details?.location}
           </p>
         </a>

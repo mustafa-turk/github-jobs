@@ -46,7 +46,6 @@ a {
 	text-decoration: none;
 }
 
-hr {
-	border-top: 1px solid #E5E8EA;
-	margin-bottom: 10px;
+textarea:focus, input:focus, button:focus{
+	outline: none;
 }

@@ -1,22 +1,25 @@
-.listItem {
-  padding: 15px;
-  border-radius: 10px;
+@import "../../styles/colors";
+
+.wrapper {
+  padding: 15px 0;
   margin: 10px 0;
-  transition: background 0.5s ease;
+  border-bottom: 1px solid #EAEAEA;
   &:hover {
     cursor: pointer;
-    background: #f6f8fa;
+    .title {
+      color: $blue-dark;
+    }
   }
 
-  .listItemTitle {
-    font-weight: 600;
-    font-size: 24px;
+  .title {
+    font-weight: 500;
+    font-size: 21px;
     margin-bottom: 5px;
-    max-width: 800px;
+    transition: color 0.2s ease;
   }
 
-  .listItemLocation {
-    color: #888888;
+  .subtitle {
+    color: $gray-dark;
     max-width: 400px;
   }
 }
