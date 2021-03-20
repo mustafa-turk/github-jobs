@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router';
-import useJobDetails from '../hooks/useJobDetails';
-import PageLayout from '../components/shared/PageLayout';
+import useJobDetails from 'hooks/useJobDetails';
+import PageLayout from 'components/shared/layout/PageLayout';
 
 export default function DetailsPage() {
   const router = useRouter();
