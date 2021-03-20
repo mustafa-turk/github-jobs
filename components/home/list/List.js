@@ -1,9 +1,11 @@
+import { times } from 'lodash';
 import Link from 'next/link';
+import Skeleton from 'react-loading-skeleton';
 import styles from './List.module.scss';
 
 export function List({ children, isLoading, isEmpty }) {
   if (isLoading) {
-    return 'loading...';
+    return times(5, () => <ListItemLoading />);
   }
   if (isEmpty) {
     return 'nothing found :(';
@@ -22,6 +24,19 @@ export function ListItem({ details }) {
           </p>
         </a>
       </Link>
+    </div>
+  );
+}
+
+export function ListItemLoading() {
+  return (
+    <div className={styles.wrapper}>
+      <p className={styles.titleLoading}>
+        <Skeleton />
+      </p>
+      <p className={styles.subtitleLoading}>
+        <Skeleton />
+      </p>
     </div>
   );
 }

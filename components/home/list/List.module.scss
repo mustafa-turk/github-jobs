@@ -18,8 +18,18 @@
     transition: color 0.2s ease;
   }
 
+  .titleLoading {
+    @extend .title;
+    max-width: 520px;
+  }
+
   .subtitle {
     color: $gray-dark;
     max-width: 400px;
+  }
+
+  .subtitleLoading {
+    @extend .subtitle;
+    max-width: 320px;
   }
 }
