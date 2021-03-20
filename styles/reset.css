@@ -49,3 +49,7 @@ a {
 textarea:focus, input:focus, button:focus{
 	outline: none;
 }
+
+*::-webkit-scrollbar {
+  display: none;
+}
