@@ -5,6 +5,7 @@ import useJobs from 'hooks/useJobs';
 import { List, ListItem } from 'components/home/list/List';
 import PageLayout from 'components/shared/layout/PageLayout';
 import Search from 'components/home/search/Search';
+import Header from 'components/home/header/Header';
 
 export default function HomePage() {
   const router = useRouter();
@@ -12,6 +13,7 @@ export default function HomePage() {
 
   return (
     <PageLayout>
+      <Header />
       <Search
         onSearch={(values) =>
           router.push(`?${qs.stringify({ search: values.search }, { skipEmptyString: true })}`)
