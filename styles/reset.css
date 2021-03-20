@@ -26,6 +26,11 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 }
+button {
+	background: none;
+	border: none;
+	cursor: pointer;
+}
 ol, ul {
 	list-style: none;
 }

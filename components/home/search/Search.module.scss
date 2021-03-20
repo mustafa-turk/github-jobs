@@ -20,7 +20,6 @@
       @include placeholder-color(#a8b2bb);
     }
     button {
-      border: none;
       display: flex;
       align-items: center;
       padding: 0 20px;
@@ -29,7 +28,6 @@
       border-radius: 5px;
       font-size: 21px;
       font-weight: bold;
-      cursor: pointer;
       @media (max-width: $breakpoint-md) {
         padding: 12px;
       }

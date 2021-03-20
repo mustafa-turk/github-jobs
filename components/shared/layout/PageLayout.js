@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Footer from '../footer/Footer';
 import styles from './PageLayout.module.scss';
 
 export default function PageLayout({ children, title }) {
@@ -7,7 +8,8 @@ export default function PageLayout({ children, title }) {
       <Head>
         <title>{title || 'GitHub Jobs'}</title>
       </Head>
-      {children}
+      <div className={styles.content}>{children}</div>
+      <Footer />
     </div>
   );
 }

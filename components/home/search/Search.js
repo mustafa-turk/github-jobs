@@ -2,7 +2,7 @@ import { useForm } from 'react-hook-form';
 import { IoSearch, IoCloseCircleOutline } from 'react-icons/io5';
 import styles from './Search.module.scss';
 
-export default function Search({ onSearch, onReset }) {
+export default function Search({ onSearch }) {
   const { register, handleSubmit, reset } = useForm({ mode: 'onChange' });
 
   return (
