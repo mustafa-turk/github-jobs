@@ -1,8 +1,8 @@
 import { useRouter } from 'next/router';
-import { IoArrowBack } from 'react-icons/io5';
-
 import useJobDetails from 'hooks/useJobDetails';
 import PageLayout from 'components/shared/layout/PageLayout';
+import Topbar from 'components/details/topbar/Topbar';
+import Content from 'components/details/content/Content';
 
 export default function DetailsPage() {
   const router = useRouter();
@@ -11,10 +11,8 @@ export default function DetailsPage() {
 
   return (
     <PageLayout title={details?.title}>
-      <button onClick={() => router.back()}>
-        <IoArrowBack />
-      </button>
-      {loading ? 'loading...' : <p>{details.title}</p>}
+      <Topbar />
+      <Content details={details} loading={loading} />
     </PageLayout>
   );
 }

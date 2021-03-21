@@ -5,7 +5,7 @@ import styles from './List.module.scss';
 
 export function List({ children, isLoading, isEmpty }) {
   if (isLoading) {
-    return times(5, () => <ListItemLoading />);
+    return times(5, (i) => <ListItemLoading key={i} />);
   }
   if (isEmpty) {
     return 'nothing found :(';

@@ -1,0 +1,22 @@
+@import "styles/colors";
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  button {
+    font-size: 30px;
+    width: 30px;
+    height: 30px;
+  }
+  span {
+    font-size: 12px;
+    color: $blue-dark;
+    letter-spacing: 2px;
+  }
+  div {
+    width: 30px;
+    height: 30px;
+  }
+}
