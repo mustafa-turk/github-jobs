@@ -1,11 +1,50 @@
+@import "styles/breakpoints";
+@import "styles/colors";
+
 .wrapper {
   h1 {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     font-size: 30px;
+    @media (max-width: $breakpoint-md) {
+      font-size: 26px;
+    }
   }
 
-  p {
-    margin-bottom: 10px;
+  .actions {
+    text-align: center;
+    button {
+      border-radius: 5px;
+      padding: 10px 20px;
+      font-size: 16px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      svg {
+        margin-left: 5px;
+      }
+    }
+    .apply {
+      background: $blue-dark;
+      color: white;
+    }
+  }
+
+  .description {
+    margin-top: 50px;
+    strong {
+      font-weight: 500;
+      display: block;
+    }
+    p {
+      margin: 15px 0;
+    }
+
+    ul {
+      list-style-type: circle;
+      padding-left: 20px;
+    }
+
+
   }
 }

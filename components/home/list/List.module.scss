@@ -1,4 +1,5 @@
 @import "styles/colors";
+@import "styles/breakpoints";
 
 .wrapper {
   padding: 15px 0;
@@ -16,16 +17,22 @@
     font-size: 21px;
     margin-bottom: 5px;
     transition: color 0.2s ease;
-  }
-
-  .titleLoading {
-    @extend .title;
-    max-width: 520px;
+    @media (max-width: $breakpoint-md) {
+      font-size: 18px;
+    }
   }
 
   .subtitle {
     color: $gray-dark;
     max-width: 400px;
+    @media (max-width: $breakpoint-md) {
+      font-size: 16px;
+    }
+  }
+
+  .titleLoading {
+    @extend .title;
+    max-width: 520px;
   }
 
   .subtitleLoading {

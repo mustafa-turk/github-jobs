@@ -9,7 +9,7 @@ export default function PageLayout({ children, title }) {
         <title>{title || 'GitHub Jobs'}</title>
       </Head>
       <div className={styles.content}>{children}</div>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }

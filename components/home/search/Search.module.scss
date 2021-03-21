@@ -6,6 +6,9 @@
   border-radius: 10px;
   padding: 5px;
   margin-bottom: 30px;
+  @media (max-width: $breakpoint-md) {
+    margin-bottom: 10px;
+  }
   form {
     display: flex;
     flex-wrap: wrap;
@@ -17,6 +20,9 @@
       padding: 12px;
       font-size: 17px;
       @include placeholder-color(#a8b2bb);
+      @media (max-width: $breakpoint-md) {
+        font-size: 16px;
+      }
     }
     button {
       display: flex;
@@ -27,9 +33,6 @@
       border-radius: 5px;
       font-size: 21px;
       font-weight: bold;
-      @media (max-width: $breakpoint-md) {
-        padding: 12px;
-      }
     }
     .reset {
       background: none;
