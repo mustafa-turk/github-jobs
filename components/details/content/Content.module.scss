@@ -1,18 +1,39 @@
 @import "styles/breakpoints";
 @import "styles/colors";
 
-.wrapper {
-  h1 {
+.wrapperLoading {
+  @extend .wrapper;
+  margin-top: 20px;
+
+  .heading {
+    max-width: 450px;
     text-align: center;
-    margin-bottom: 10px;
-    font-size: 30px;
-    @media (max-width: $breakpoint-md) {
-      font-size: 26px;
+    margin: 0px auto;
+  }
+}
+
+.wrapper {
+  .heading {
+    max-width: 450px;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    h1 {
+      margin-bottom: 10px;
+      font-size: 30px;
+      @media (max-width: $breakpoint-md) {
+        font-size: 26px;
+      }
+    }
+    p {
+      font-size: 19px;
     }
   }
 
   .actions {
     text-align: center;
+    border-bottom: 1px solid rgba($color: $gray-dark, $alpha: 0.3);
+    padding-bottom: 30px;
     button {
       border-radius: 5px;
       padding: 10px 20px;
@@ -31,7 +52,15 @@
   }
 
   .description {
-    margin-top: 50px;
+    margin-top: 30px;
+    .descriptionHeader {
+      font-size: 21px;
+      font-weight: 500;
+    }
+    h1, h2 {
+      margin-bottom: 10px;
+      font-weight: 500;
+    }
     strong {
       font-weight: 500;
       display: block;
@@ -43,8 +72,7 @@
     ul {
       list-style-type: circle;
       padding-left: 20px;
+      margin-bottom: 15px;
     }
-
-
   }
 }

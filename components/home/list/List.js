@@ -15,16 +15,16 @@ export function List({ children, isLoading, isEmpty }) {
 
 export function ListItem({ details }) {
   return (
-    <div className={styles.wrapper}>
-      <Link href={`/${details.id}`}>
-        <a>
+    <Link href={`/${details.id}`}>
+      <a>
+        <div className={styles.wrapper}>
           <p className={styles.title}>{details?.title}</p>
           <p className={styles.subtitle}>
             {details?.company} - {details?.location}
           </p>
-        </a>
-      </Link>
-    </div>
+        </div>
+      </a>
+    </Link>
   );
 }
 
