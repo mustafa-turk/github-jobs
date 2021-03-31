@@ -1,3 +1,4 @@
+import { startCase } from 'lodash';
 import { IoOpenOutline as OpenIcon } from 'react-icons/io5';
 import Skeleton from 'react-loading-skeleton';
 import styles from './Content.module.scss';
@@ -9,7 +10,7 @@ export default function Content({ loading, details }) {
     <div className={styles.wrapper}>
       <div className={styles.heading}>
         <h1>{details.title}</h1>
-        <p>{details.location}</p>
+        <p>{startCase(details.location)}</p>
         <p>{details.company}</p>
       </div>
       <div className={styles.actions}>
@@ -34,8 +35,12 @@ function ContentLoading() {
         <h1>
           <Skeleton />
         </h1>
-        <p>{details.location}</p>
-        <p>{details.company}</p>
+        <p>
+          <Skeleton />
+        </p>
+        <p>
+          <Skeleton />
+        </p>
       </div>
       <div className={styles.description}>
         <Skeleton />
