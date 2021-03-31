@@ -1,11 +1,11 @@
 {
   "name": "gh-jobs",
   "version": "0.1.0",
-  "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "cy:open": "cypress open"
   },
   "dependencies": {
     "axios": "^0.21.1",
@@ -25,6 +25,7 @@
     "@babel/eslint-parser": "^7.13.10",
     "babel-eslint": "^10.1.0",
     "babel-plugin-styled-components": "^1.12.0",
+    "cypress": "^6.8.0",
     "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-react": "^7.22.0",
