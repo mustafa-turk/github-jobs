@@ -10,8 +10,15 @@ export default function Content({ loading, details }) {
     <div className={styles.wrapper}>
       <div className={styles.heading}>
         <h1>{details.title}</h1>
-        <p>{startCase(details.location)}</p>
-        <p>{details.company}</p>
+        <p>
+          <a
+            href={details.company_url}
+            rel="noopener noreferrer"
+            target="_blank"
+          >{`${details.company}`}</a>
+          {` - ${startCase(details.location)}`}
+        </p>
+        <p></p>
       </div>
       <div className={styles.actions}>
         <a href={href} rel="noopener noreferrer" target="_blank">

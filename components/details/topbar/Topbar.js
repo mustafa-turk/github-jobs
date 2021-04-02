@@ -10,8 +10,6 @@ export default function Topbar() {
       <button onClick={() => router.back()}>
         <ArrowBackIcon />
       </button>
-      <span>DETAILS</span>
-      <div />
     </div>
   );
 }

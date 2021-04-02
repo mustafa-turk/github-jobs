@@ -14,10 +14,10 @@
 
 .wrapper {
   .heading {
-    max-width: 450px;
+    max-width: 600px;
     text-align: center;
     margin: 0 auto;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     h1 {
       margin-bottom: 10px;
       font-size: 30px;
@@ -27,6 +27,12 @@
     }
     p {
       font-size: 19px;
+    }
+    a {
+      color: $blue-dark;
+      &:hover {
+        border-bottom: 1px solid $blue-dark;
+      }
     }
   }
 
