@@ -18,8 +18,8 @@ export function ListItem({ details }) {
     <Link href={`/${details.id}`}>
       <a>
         <div className={styles.wrapper}>
-          <p className={styles.title}>{details?.title}</p>
-          <p className={styles.subtitle}>
+          <p className={styles.title} data-cy="list-item-title">{details?.title}</p>
+          <p className={styles.subtitle} data-cy="list-item-details">
             {details?.company} - {details?.location}
           </p>
         </div>

@@ -18,6 +18,7 @@ export default function HomePage() {
         onSearch={(values) =>
           router.push(`?${qs.stringify({ search: values.search }, { skipEmptyString: true })}`)
         }
+        onReset={() => router.push('/')}
       />
       <List isLoading={loading} isEmpty={isEmpty(jobs)}>
         {map(jobs, (job) => (
