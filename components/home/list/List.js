@@ -1,6 +1,7 @@
 import { times } from 'lodash';
 import Link from 'next/link';
 import Skeleton from 'react-loading-skeleton';
+import { AiFillStar } from 'react-icons/ai';
 import styles from './List.module.scss';
 
 export function List({ children, isLoading, isEmpty }) {
@@ -13,18 +14,23 @@ export function List({ children, isLoading, isEmpty }) {
   return <div>{children}</div>;
 }
 
-export function ListItem({ details }) {
+export function ListItem({ details, isFaved, onFavClick }) {
   return (
-    <Link href={`/${details.id}`}>
-      <a>
-        <div className={styles.wrapper}>
-          <p className={styles.title} data-cy="list-item-title">{details?.title}</p>
-          <p className={styles.subtitle} data-cy="list-item-details">
-            {details?.company} - {details?.location}
-          </p>
-        </div>
-      </a>
-    </Link>
+    <div className={styles.wrapper}>
+      <Link href={`/${details.id}`}>
+        <a>
+          <div className={styles.content}>
+            <p className={styles.title} data-cy="list-item-title">{details?.title}</p>
+            <p className={styles.subtitle} data-cy="list-item-details">
+              {details?.company} - {details?.location}
+            </p>
+          </div>
+        </a>
+      </Link>
+      <button onClick={onFavClick}>
+        <AiFillStar size="21px" fill={isFaved ? '#F4B226' : 'gray'} />
+      </button>
+    </div>
   );
 }
 

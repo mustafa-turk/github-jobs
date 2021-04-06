@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router';
-import { FiClock, FiHome } from 'react-icons/fi';
+import { FiClock, FiHome, FiStar } from 'react-icons/fi';
 import styles from './Navbar.module.scss';
 
 export default function Navbar() {
@@ -7,6 +7,9 @@ export default function Navbar() {
     <div className={styles.wrapper}>
       <NavbarItem slug="/">
         <FiHome size="21px" />
+      </NavbarItem>
+      <NavbarItem slug="/favourites">
+        <FiStar size="21px" />
       </NavbarItem>
       <NavbarItem slug="/history">
         <FiClock size="21px" />

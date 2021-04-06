@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router';
-import { map, isEmpty } from 'lodash';
+import { map, isEmpty, find } from 'lodash';
 import qs from 'query-string';
 import useJobs from 'hooks/useJobs';
 import { List, ListItem } from 'components/home/list/List';
@@ -7,10 +7,12 @@ import PageLayout from 'components/shared/layout/PageLayout';
 import Search from 'components/home/search/Search';
 import Header from 'components/home/header/Header';
 import Navbar from 'components/home/navbar/Navbar';
+import useFavourites from 'hooks/useFavourites';
 
 export default function HomePage() {
   const router = useRouter();
   const { jobs, loading } = useJobs(router.asPath);
+  const { favourites, setFavourites } = useFavourites();
 
   return (
     <PageLayout>
@@ -23,7 +25,12 @@ export default function HomePage() {
         onReset={() => router.push('/')}
       />
       <List isLoading={loading} isEmpty={isEmpty(jobs)}>
-        {map(jobs, (job) => <ListItem key={job.id} details={job} />)}
+        {map(jobs, (job) =>
+          <ListItem
+            key={job.id}
+            details={job}
+            isFaved={find(favourites, (fav) => (fav.id === job.id))}
+            onFavClick={() => setFavourites(job)} />)}
       </List>
     </PageLayout>
   );
