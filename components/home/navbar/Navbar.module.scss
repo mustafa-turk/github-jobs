@@ -1,0 +1,25 @@
+@import "styles/colors";
+
+.wrapper {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba($color: $gray-dark, $alpha: 0.2);
+  padding: 15px 0;
+  margin-bottom: 20px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  .element {
+    flex: 1;
+    text-align: center;
+    svg {
+      color: $gray-dark;
+    }
+  }
+  .element.active {
+    svg {
+      color: $blue-dark;
+    }
+  }
+}
