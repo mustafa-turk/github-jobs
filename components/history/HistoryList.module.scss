@@ -21,4 +21,14 @@
       transition: color 0.2s ease;
     }
   }
+  .clearButtonWrapper {
+    text-align: center;
+    .clearButton {
+      background-color: $gray-light;
+      color: $gray-dark;
+      padding: 10px 25px;
+      font-size: 16px;
+      border-radius: 8px;
+    }
+  }
 }

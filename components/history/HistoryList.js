@@ -1,11 +1,8 @@
-import { format, formatDistance } from "date-fns";
+import { formatDistance } from "date-fns";
 import Link from "next/link";
-import { useRouter } from "next/router";
 import styles from "./HistoryList.module.scss";
 
-export default function HistoryList({ history }) {
-  const router = useRouter();
-
+export default function HistoryList({ history, onClear }) {
   return (
     <div className={styles.wrapper}>
       {history.map(({ id, title, date }) => (
@@ -18,6 +15,9 @@ export default function HistoryList({ history }) {
           </a>
         </Link>
       ))}
+      <div className={styles.clearButtonWrapper}>
+        <button className={styles.clearButton} onClick={onClear}>Clear history</button>
+      </div>
     </div>
   )
 }

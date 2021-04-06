@@ -5,13 +5,13 @@ import Navbar from 'components/home/navbar/Navbar';
 import HistoryList from 'components/history/HistoryList';
 
 export default function HistoryPage() {
-  const { history } = useHistory();
+  const { history, clearHistory } = useHistory();
 
   return (
     <PageLayout>
       <Header />
       <Navbar />
-      <HistoryList history={history} />
+      <HistoryList history={history} onClear={clearHistory} />
     </PageLayout>
   );
 }
