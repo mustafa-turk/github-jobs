@@ -23,9 +23,7 @@ export default function HomePage() {
         onReset={() => router.push('/')}
       />
       <List isLoading={loading} isEmpty={isEmpty(jobs)}>
-        {map(jobs, (job) => (
-          <ListItem key={job.id} details={job} />
-        ))}
+        {map(jobs, (job) => <ListItem key={job.id} details={job} />)}
       </List>
     </PageLayout>
   );

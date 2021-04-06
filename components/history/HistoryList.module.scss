@@ -1,0 +1,24 @@
+@import "styles/colors";
+
+.wrapper {
+  .item {
+    margin-bottom: 20px;
+    &:hover {
+      .title {
+        color: $blue-dark;
+      }
+    }
+
+    .date {
+      color: $gray-dark;
+      font-size: 14px;
+    }
+
+    .title {
+      font-weight: 500;
+      font-size: 18px;
+      margin-top: 2px;
+      transition: color 0.2s ease;
+    }
+  }
+}
