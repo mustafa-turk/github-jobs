@@ -35,19 +35,24 @@
         font-size: 16px;
       }
     }
-
-    .titleLoading {
-      @extend .title;
-      max-width: 520px;
-    }
-
-    .subtitleLoading {
-      @extend .subtitle;
-      max-width: 320px;
-    }
   }
 
   button {
     padding: 0;
+  }
+}
+
+.wrapperLoading {
+  @extend .wrapper;
+  display: block;
+
+  .titleLoading {
+    @extend .title;
+    max-width: 520px;
+  }
+
+  .subtitleLoading {
+    @extend .subtitle;
+    max-width: 320px;
   }
 }

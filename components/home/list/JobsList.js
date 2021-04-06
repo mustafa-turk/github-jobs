@@ -36,7 +36,7 @@ export function ListItem({ details, isFaved, onFavClick }) {
 
 export function ListItemLoading() {
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.wrapperLoading}>
       <p className={styles.titleLoading}>
         <Skeleton />
       </p>
