@@ -4,7 +4,7 @@ import PageLayout from 'components/shared/layout/PageLayout';
 import Header from 'components/home/header/Header';
 import Navbar from 'components/home/navbar/Navbar';
 import FavouritesList from 'components/favourites/FavouritesList';
-import { ListItem } from 'components/home/list/List';
+import { ListItem } from 'components/home/list/JobsList';
 
 export default function HistoryPage() {
   const { favourites, removeFavorite } = useFavourites();

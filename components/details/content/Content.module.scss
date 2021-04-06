@@ -54,6 +54,17 @@
     .apply {
       background: $blue-dark;
       color: white;
+      margin-right: 10px;
+    }
+    .saved {
+      background: rgba($color: #FDF0D4, $alpha: 0.5);
+      color: #F4B226;
+      transition: background 0.2s ease, color 0.3s ease;
+    }
+    .unsaved {
+      background: $gray-light;
+      color: $gray-dark;
+      transition: background 0.2s ease, color 0.3s ease;
     }
   }
 

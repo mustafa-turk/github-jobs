@@ -2,7 +2,7 @@ import { times } from 'lodash';
 import Link from 'next/link';
 import Skeleton from 'react-loading-skeleton';
 import { AiFillStar } from 'react-icons/ai';
-import styles from './List.module.scss';
+import styles from './JobsList.module.scss';
 
 export function List({ children, isLoading, isEmpty }) {
   if (isLoading) {
