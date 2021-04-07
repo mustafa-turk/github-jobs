@@ -2,10 +2,10 @@ import { useRouter } from 'next/router';
 import { map, isEmpty, find } from 'lodash';
 import qs from 'query-string';
 import useJobs from 'hooks/useJobs';
-import { List, ListItem } from 'components/home/list/JobsList';
-import Search from 'components/home/search/Search';
+import { List, ListItem } from 'components/home/JobsList';
+import Search from 'components/home/Search';
 import useFavourites from 'hooks/useFavourites';
-import HomePageLayout from 'components/layout/HomePageLayout';
+import HomePageLayout from 'components/shared/layout/HomePageLayout';
 
 export default function HomePage() {
   const router = useRouter();
@@ -21,12 +21,14 @@ export default function HomePage() {
         onReset={() => router.push('/')}
       />
       <List isLoading={loading} isEmpty={isEmpty(jobs)}>
-        {map(jobs, (job) =>
+        {map(jobs, (job) => (
           <ListItem
             key={job.id}
             details={job}
-            isFaved={find(favourites, (fav) => (fav.id === job.id))}
-            onFavClick={() => setFavourites(job)} />)}
+            isFaved={find(favourites, (fav) => fav.id === job.id)}
+            onFavClick={() => setFavourites(job)}
+          />
+        ))}
       </List>
     </HomePageLayout>
   );

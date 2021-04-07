@@ -1,5 +1,5 @@
-import { filter, findIndex, orderBy } from "lodash";
-import useLocalStorage from "./useLocalStorage"
+import { filter, findIndex, orderBy } from 'lodash';
+import useLocalStorage from './useLocalStorage';
 
 export default function useFavourites() {
   const [favedJobs, setFavedJobs] = useLocalStorage('favourites', []);
@@ -20,12 +20,12 @@ export default function useFavourites() {
       removeFavorite(id);
       return;
     }
-    setFavedJobs([...favedJobs, { id, title, company, location, date: new Date() }])
+    setFavedJobs([...favedJobs, { id, title, company, location, date: new Date() }]);
   }
 
   return {
     favourites: getFavourites(),
     setFavourites,
-    removeFavorite
+    removeFavorite,
   };
 }

@@ -1,5 +1,5 @@
-import { last, orderBy } from "lodash";
-import useLocalStorage from "./useLocalStorage"
+import { last, orderBy } from 'lodash';
+import useLocalStorage from './useLocalStorage';
 
 export default function useHistory() {
   const [viewedJobs, setViewedJobs] = useLocalStorage('jobs', []);
@@ -20,6 +20,6 @@ export default function useHistory() {
   return {
     history: getHistory(),
     setHistory,
-    clearHistory
+    clearHistory,
   };
 }

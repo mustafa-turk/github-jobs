@@ -2,9 +2,9 @@ import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import useJobDetails from 'hooks/useJobDetails';
 import useHistory from 'hooks/useHistory';
-import PageLayout from 'components/layout/PageLayout';
-import Content from 'components/details/content/Content';
-import Navbar from 'components/details/navbar/Navbar';
+import PageLayout from 'components/shared/layout/PageLayout';
+import Content from 'components/details/Content';
+import Navbar from 'components/details/Navbar';
 
 export default function DetailsPage() {
   const router = useRouter();
@@ -14,7 +14,7 @@ export default function DetailsPage() {
 
   useEffect(() => {
     if (details) setHistory(id, details.title);
-  }, [id, details]);
+  }, [id, details, setHistory]);
 
   return (
     <PageLayout title={details?.title}>
