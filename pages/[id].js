@@ -2,8 +2,9 @@ import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import useJobDetails from 'hooks/useJobDetails';
 import useHistory from 'hooks/useHistory';
-import PageLayout from 'components/shared/layout/PageLayout';
+import PageLayout from 'components/layout/PageLayout';
 import Content from 'components/details/content/Content';
+import Navbar from 'components/details/navbar/Navbar';
 
 export default function DetailsPage() {
   const router = useRouter();
@@ -17,6 +18,7 @@ export default function DetailsPage() {
 
   return (
     <PageLayout title={details?.title}>
+      <Navbar />
       <Content details={details} loading={loading} />
     </PageLayout>
   );

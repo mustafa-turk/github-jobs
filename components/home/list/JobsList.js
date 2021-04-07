@@ -28,7 +28,7 @@ export function ListItem({ details, isFaved, onFavClick }) {
         </a>
       </Link>
       <button onClick={onFavClick}>
-        <AiFillStar size="21px" fill={isFaved ? '#F4B226' : 'gray'} />
+        <AiFillStar size="21px" className={isFaved ? styles.saved : styles.unsaved} />
       </button>
     </div>
   );

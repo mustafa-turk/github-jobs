@@ -22,11 +22,14 @@
       margin-bottom: 10px;
       font-size: 30px;
       @media (max-width: $breakpoint-md) {
-        font-size: 26px;
+        font-size: 23px;
       }
     }
     p {
       font-size: 19px;
+      @media (max-width: $breakpoint-md) {
+        font-size: 16px;
+      }
     }
     a {
       color: $blue-dark;
@@ -37,9 +40,9 @@
   }
 
   .actions {
-    text-align: center;
-    border-bottom: 1px solid rgba($color: $gray-dark, $alpha: 0.3);
-    padding-bottom: 30px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
     button {
       border-radius: 5px;
       padding: 10px 20px;
@@ -47,18 +50,26 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      svg {
-        margin-left: 5px;
+    }
+    a {
+      margin-right: 10px;
+
+      @media (max-width: $breakpoint-md) {
+        flex: 1;
       }
     }
     .apply {
       background: $blue-dark;
       color: white;
-      margin-right: 10px;
+      font-weight: 500;
+      padding: 10px 40px;
+      @media (max-width: $breakpoint-md) {
+        width: 100%;
+      }
     }
     .saved {
-      background: rgba($color: #FDF0D4, $alpha: 0.5);
-      color: #F4B226;
+      background: $yellow-light;
+      color: $yellow-dark;
       transition: background 0.2s ease, color 0.3s ease;
     }
     .unsaved {

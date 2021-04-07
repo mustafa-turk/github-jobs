@@ -5,11 +5,3 @@ export default function FavouritesList({ children }) {
     </div>
   )
 }
-
-export function FavouritesListItem({ details }) {
-  return (
-    <div>
-      {details.title}
-    </div>
-  )
-}

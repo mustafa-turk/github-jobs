@@ -29,11 +29,11 @@ export default function Content({ loading, details }) {
       <div className={styles.actions}>
         <a href={href} rel="noopener noreferrer" target="_blank">
           <button className={styles.apply}>
-            Apply <OpenIcon />
+            Apply now
           </button>
         </a>
         <button className={isFaved ? styles.saved : styles.unsaved} onClick={() => setFavourites(details)}>
-          {isFaved ? 'Saved' : 'Save'} <StarIcon />
+          <StarIcon />
         </button>
       </div>
       <div className={styles.description}>

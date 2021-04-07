@@ -1,5 +1,5 @@
 import useHistory from 'hooks/useHistory';
-import PageLayout from 'components/shared/layout/PageLayout';
+import PageLayout from 'components/layout/PageLayout';
 import Header from 'components/home/header/Header';
 import Navbar from 'components/home/navbar/Navbar';
 import HistoryList from 'components/history/HistoryList';
