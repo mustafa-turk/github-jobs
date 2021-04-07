@@ -1,21 +1,17 @@
 import { map } from 'lodash';
 import useFavourites from 'hooks/useFavourites';
-import PageLayout from 'components/layout/PageLayout';
-import Header from 'components/home/header/Header';
-import Navbar from 'components/home/navbar/Navbar';
 import FavouritesList from 'components/favourites/FavouritesList';
 import { ListItem } from 'components/home/list/JobsList';
+import HomePageLayout from 'components/layout/HomePageLayout';
 
 export default function HistoryPage() {
   const { favourites, removeFavorite } = useFavourites();
 
   return (
-    <PageLayout>
-      <Header />
-      <Navbar />
+    <HomePageLayout>
       <FavouritesList isLoading={false} isEmpty={false}>
         {map(favourites, (fav) => <ListItem details={fav} isFaved={true} onFavClick={() => removeFavorite(fav.id)} />)}
       </FavouritesList>
-    </PageLayout>
+    </HomePageLayout>
   );
 }

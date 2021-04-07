@@ -3,11 +3,9 @@ import { map, isEmpty, find } from 'lodash';
 import qs from 'query-string';
 import useJobs from 'hooks/useJobs';
 import { List, ListItem } from 'components/home/list/JobsList';
-import PageLayout from 'components/layout/PageLayout';
 import Search from 'components/home/search/Search';
-import Header from 'components/home/header/Header';
-import Navbar from 'components/home/navbar/Navbar';
 import useFavourites from 'hooks/useFavourites';
+import HomePageLayout from 'components/layout/HomePageLayout';
 
 export default function HomePage() {
   const router = useRouter();
@@ -15,9 +13,7 @@ export default function HomePage() {
   const { favourites, setFavourites } = useFavourites();
 
   return (
-    <PageLayout>
-      <Header />
-      <Navbar />
+    <HomePageLayout>
       <Search
         onSearch={(values) =>
           router.push(`?${qs.stringify({ search: values.search }, { skipEmptyString: true })}`)
@@ -32,6 +28,6 @@ export default function HomePage() {
             isFaved={find(favourites, (fav) => (fav.id === job.id))}
             onFavClick={() => setFavourites(job)} />)}
       </List>
-    </PageLayout>
+    </HomePageLayout>
   );
 }
