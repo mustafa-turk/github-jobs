@@ -27,7 +27,7 @@ export function ListItem({ details, isFaved, onFavClick }) {
           </ItemContent>
         </a>
       </Link>
-      <FavoriteButton onClick={onFavClick}>
+      <FavoriteButton aria-label="Add to favourites" onClick={onFavClick}>
         <FavoriteIcon size="21px" isFaved={isFaved} />
       </FavoriteButton>
     </ItemWrapper>

@@ -22,7 +22,9 @@ function NavbarItem({ slug, children }) {
   const router = useRouter();
   return (
     <ItemWrapper isActive={router.pathname === slug}>
-      <button onClick={() => router.push(slug)}>{children}</button>
+      <button aria-label={`Go to ${slug}`} onClick={() => router.push(slug)}>
+        {children}
+      </button>
     </ItemWrapper>
   );
 }

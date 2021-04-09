@@ -29,7 +29,11 @@ export default function Content({ loading, details }) {
         <ApplyButtonLink href={href} rel="noopener noreferrer" target="_blank">
           <ApplyButton>Apply now</ApplyButton>
         </ApplyButtonLink>
-        <SaveButton isFaved={isFaved} onClick={() => setFavourites(details)}>
+        <SaveButton
+          aria-label="Add to favourites"
+          isFaved={isFaved}
+          onClick={() => setFavourites(details)}
+        >
           <StarFillIcon size="19px" />
         </SaveButton>
       </Actions>

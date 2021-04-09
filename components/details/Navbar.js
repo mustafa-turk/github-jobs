@@ -7,7 +7,7 @@ export default function Navbar() {
 
   return (
     <Wrapper>
-      <BackButton onClick={() => router.back()}>
+      <BackButton aria-label="Go back" onClick={() => router.back()}>
         <ArrowLeft size="21px" />
       </BackButton>
     </Wrapper>

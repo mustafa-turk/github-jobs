@@ -21,6 +21,7 @@ export default function Search({ onSearch, onReset }) {
         {!isEmpty(watch('search')) ? (
           <ResetButton
             type="button"
+            aria-label="Reset search query"
             data-cy="search-reset-button"
             onClick={() => {
               reset();
@@ -30,7 +31,7 @@ export default function Search({ onSearch, onReset }) {
             <CloseIcon />
           </ResetButton>
         ) : null}
-        <SubmitButton type="submit" data-cy="search-button">
+        <SubmitButton aria-label="Search" type="submit" data-cy="search-button">
           <SearchIcon />
         </SubmitButton>
       </Form>
