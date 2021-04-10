@@ -44,7 +44,6 @@ const Wrapper = styled.div`
 const ItemWrapper = styled.div`
   flex: 1;
   text-align: center;
-
   svg {
     color: ${(p) => (p.isActive ? p.theme.colors.blue.dark : p.theme.colors.gray.dark)};
   }

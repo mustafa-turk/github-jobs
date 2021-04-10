@@ -5,7 +5,7 @@ export default function PageLayout({ children, title }) {
   return (
     <div>
       <Head>
-        <title>{title || 'GitHub Jobs'}</title>
+        <title>{title || 'Devjobs - Find jobs for developers'}</title>
       </Head>
       <Content>{children}</Content>
     </div>
