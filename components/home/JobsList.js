@@ -68,14 +68,17 @@ const ItemContentTitle = styled.p`
   @media (max-width: ${(p) => p.theme.breakpoints.md}) {
     font-size: 18px;
   }
+  &:hover {
+    color: ${(p) => p.theme.colors.blue.dark};
+  }
 `;
 
 const ItemContentSubtitle = styled.p`
-  color: ${(p) => p.theme.colors.gray.dark};
   max-width: 400px;
   @media (max-width: ${(p) => p.theme.breakpoints.md}) {
     font-size: 16px;
   }
+  color: ${(p) => p.theme.colors.gray.dark};
 `;
 
 const FavoriteButton = styled.button`

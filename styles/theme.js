@@ -6,7 +6,7 @@ const theme = {
     gray: {
       light: '#F3F3F3',
       medium: '#E7E7E7',
-      dark: '#888888',
+      dark: '#666666',
     },
     yellow: {
       light: '#FEF7E9',
