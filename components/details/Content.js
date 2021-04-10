@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 import { find, startCase } from 'lodash';
 import Skeleton from 'react-loading-skeleton';
-import { StarFillIcon } from 'components/shared/icons';
+import { BurstIcon, StarFillIcon } from 'components/shared/icons';
 import useFavourites from 'hooks/useFavourites';
+import Pill from 'components/shared/Pill';
 
 export default function Content({ loading, details }) {
   const { favourites, setFavourites } = useFavourites();
@@ -14,6 +15,9 @@ export default function Content({ loading, details }) {
   return (
     <div>
       <Header>
+        <Pill>
+          <BurstIcon size="14px" /> New
+        </Pill>
         <Heading>{details.title}</Heading>
         <SubHeading>
           <CompanyLink

@@ -2,7 +2,8 @@ import styled from 'styled-components';
 import { times } from 'lodash';
 import Link from 'next/link';
 import Skeleton from 'react-loading-skeleton';
-import { StarFillIcon } from 'components/shared/icons';
+import { BurstIcon, StarFillIcon } from 'components/shared/icons';
+import Pill from 'components/shared/Pill';
 
 export function List({ children, isLoading, isEmpty }) {
   if (isLoading) {
@@ -17,16 +18,23 @@ export function List({ children, isLoading, isEmpty }) {
 export function ListItem({ details, isFaved, onFavClick }) {
   return (
     <ItemWrapper>
-      <Link href={`/${details.id}`}>
-        <a>
-          <ItemContent>
-            <ItemContentTitle data-cy="list-item-title">{details?.title}</ItemContentTitle>
+      <ItemContent>
+        <Link href={`/${details.id}`}>
+          <a>
+            <ItemContentHeader>
+              {details.isNew && (
+                <Pill>
+                  <BurstIcon size="14px" /> New
+                </Pill>
+              )}
+              <ItemContentTitle data-cy="list-item-title">{details?.title}</ItemContentTitle>
+            </ItemContentHeader>
             <ItemContentSubtitle data-cy="list-item-details">
               {details?.company} - {details?.location}
             </ItemContentSubtitle>
-          </ItemContent>
-        </a>
-      </Link>
+          </a>
+        </Link>
+      </ItemContent>
       <FavoriteButton aria-label="Add to favourites" onClick={onFavClick}>
         <FavoriteIcon size="21px" isFaved={isFaved} />
       </FavoriteButton>
@@ -60,10 +68,13 @@ const ItemContent = styled.div`
   flex: 1;
 `;
 
+const ItemContentHeader = styled.div`
+  margin-bottom: 5px;
+`;
+
 const ItemContentTitle = styled.p`
   font-weight: 500;
   font-size: 21px;
-  margin-bottom: 5px;
   transition: color 0.2s ease;
   @media (max-width: ${(p) => p.theme.breakpoints.md}) {
     font-size: 18px;

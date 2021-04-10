@@ -3,6 +3,10 @@ const theme = {
     blue: {
       dark: '#0070f3',
     },
+    violet: {
+      light: '#E3D7FC',
+      dark: '#7928CA',
+    },
     gray: {
       light: '#F3F3F3',
       medium: '#E7E7E7',

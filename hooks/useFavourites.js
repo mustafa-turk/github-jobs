@@ -12,7 +12,7 @@ export default function useFavourites() {
     setFavedJobs(filter([...favedJobs], (fav) => fav.id !== id));
   }
 
-  function setFavourites({ id, title, company, location }) {
+  function setFavourites({ id, title, company, location, isNew }) {
     const existingFavId = findIndex(favedJobs, (fav) => fav.id === id);
     const isAlreadyFaved = existingFavId === -1 ? false : true;
 
@@ -20,7 +20,7 @@ export default function useFavourites() {
       removeFavorite(id);
       return;
     }
-    setFavedJobs([...favedJobs, { id, title, company, location, date: new Date() }]);
+    setFavedJobs([...favedJobs, { id, title, company, location, date: new Date(), isNew }]);
   }
 
   return {
