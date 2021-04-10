@@ -14,8 +14,8 @@ export default function PageLayout({ children, title }) {
 
 const Content = styled.div`
   max-width: 960px;
-  margin: 0 auto;
+  margin: 0 auto 20px;
   @media (max-width: ${(p) => p.theme.breakpoints.lg}) {
-    margin: 0 20px;
+    margin: 0 20px 20px;
   }
 `;
