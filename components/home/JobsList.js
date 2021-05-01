@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { times } from 'lodash';
 import Link from 'next/link';
 import Skeleton from 'react-loading-skeleton';
-import { StarFillIcon } from 'components/shared/icons';
+import { StarFillIcon } from 'components/common/icons';
 
 export function List({ children, isLoading, isEmpty }) {
   if (isLoading) {

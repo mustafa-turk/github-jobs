@@ -1,11 +1,16 @@
 import { useRouter } from 'next/router';
 import { map, isEmpty, find } from 'lodash';
 import qs from 'query-string';
-import useJobs from 'hooks/useJobs';
-import { List, ListItem } from 'components/home/JobsList';
+
 import Search from 'components/home/Search';
+import HomePageLayout from 'components/common/layout/HomePageLayout';
+import Navbar from 'components/home/Navbar';
 import useFavourites from 'hooks/useFavourites';
-import HomePageLayout from 'components/shared/layout/HomePageLayout';
+import Title from 'components/common/text/Title';
+import Warning from 'components/common/Warning';
+import { List, ListItem } from 'components/home/JobsList';
+
+import useJobs from 'hooks/useJobs';
 
 export default function HomePage() {
   const router = useRouter();
@@ -14,12 +19,15 @@ export default function HomePage() {
 
   return (
     <HomePageLayout>
+      <Warning />
+      <Navbar />
       <Search
         onSearch={(values) =>
           router.push(`?${qs.stringify({ search: values.search }, { skipEmptyString: true })}`)
         }
         onReset={() => router.push('/')}
       />
+      <Title>{router.query?.search ? `Results for "${router.query?.search}"` : "All jobs"}</Title>
       <List isLoading={loading} isEmpty={isEmpty(jobs)}>
         {map(jobs, (job) => (
           <ListItem

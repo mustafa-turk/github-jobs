@@ -1,10 +1,10 @@
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
-import useJobDetails from 'hooks/useJobDetails';
-import useHistory from 'hooks/useHistory';
-import PageLayout from 'components/shared/layout/PageLayout';
+import PageLayout from 'components/common/layout/PageLayout';
 import Content from 'components/details/Content';
 import Navbar from 'components/details/Navbar';
+import useHistory from 'hooks/useHistory';
+import useJobDetails from 'hooks/useJobDetails';
 
 export default function DetailsPage() {
   const router = useRouter();

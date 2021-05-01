@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { useRouter } from 'next/router';
-import { ArrowLeftIcon } from 'components/shared/icons';
+import { ArrowLeftIcon } from 'components/common/icons';
 
 export default function Navbar() {
   const router = useRouter();

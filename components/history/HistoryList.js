@@ -10,7 +10,7 @@ export default function HistoryList({ history, onClear }) {
           <a>
             <HistoryListItem>
               <HistoryListItemDate>
-                Visited {formatDistance(new Date(date), new Date(), { addSuffix: true })}
+                Viewed {formatDistance(new Date(date), new Date(), { addSuffix: true })}
               </HistoryListItemDate>
               <HistoryListItemTitle>{title}</HistoryListItemTitle>
             </HistoryListItem>

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { isEmpty } from 'lodash';
 import { useForm } from 'react-hook-form';
-import { SearchIcon, CloseIcon } from 'components/shared/icons';
+import { SearchIcon, CloseIcon } from 'components/common/icons';
 
 export default function Search({ onSearch, onReset }) {
   const { register, handleSubmit, reset, watch } = useForm({ mode: 'onChange' });
@@ -81,4 +81,5 @@ const ResetButton = styled.button`
   color: ${(p) => p.theme.colors.gray.dark};
   padding: 0;
   margin-right: 10px;
+  font-size: 18px;
 `;

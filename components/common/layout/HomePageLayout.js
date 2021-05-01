@@ -1,6 +1,5 @@
 import styled from 'styled-components';
-import Navbar from 'components/home/Navbar';
-import PageLayout from 'components/shared/layout/PageLayout';
+import PageLayout from 'components/common/layout/PageLayout';
 
 export default function HomePageLayout({ children }) {
   return (
@@ -9,7 +8,6 @@ export default function HomePageLayout({ children }) {
         <Logo>DEVJOBS</Logo>
         <Title>Jobs for developers</Title>
       </Header>
-      <Navbar />
       {children}
     </PageLayout>
   );

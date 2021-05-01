@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { find, startCase } from 'lodash';
 import Skeleton from 'react-loading-skeleton';
-import { StarFillIcon } from 'components/shared/icons';
+import { StarFillIcon } from 'components/common/icons';
 import useFavourites from 'hooks/useFavourites';
 
 export default function Content({ loading, details }) {
